@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-3/12">
             <div className="mb-10 w-full">
-              <Link href="/" className="mb-6 inline-block max-w-[160px]">
+              {/* <Link href="/" className="mb-6 inline-block max-w-[160px]">
                 <Image
                   src="/images/logo/logo-white.svg"
                   alt="logo"
@@ -19,7 +19,7 @@ const Footer = () => {
                   height={30}
                   className="max-w-full"
                 />
-              </Link>
+              </Link> */}
               <p className="mb-8 max-w-[270px] text-base text-gray-7">
                 We create digital experiences for brands and companies by using
                 technology.

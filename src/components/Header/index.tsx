@@ -44,7 +44,7 @@ const Header = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <>
+    
       <header
         className={`ud-header left-0 top-0 z-40 flex w-full items-center ${
           sticky
@@ -80,7 +80,7 @@ const Header = () => {
                   </>
                 ) : (
                   <>
-                    <Image
+                    {/* <Image
                       src={`${
                         sticky
                           ? "/images/logo/logo.svg"
@@ -90,14 +90,14 @@ const Header = () => {
                       width={140}
                       height={30}
                       className="header-logo w-full dark:hidden"
-                    />
-                    <Image
+                    /> */}
+                    {/* <Image
                       src={"/images/logo/logo-white.svg"}
                       alt="logo"
                       width={140}
                       height={30}
                       className="header-logo hidden w-full dark:block"
-                    />
+                    /> */}
                   </>
                 )}
               </Link>
@@ -260,7 +260,7 @@ const Header = () => {
               </div>
               <div className="hidden items-center justify-end pr-16 sm:flex lg:pr-0">
                 {/* theme toggler */}
-                <button
+                {/* <button
                   aria-label="theme toggler"
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                   className="flex h-8 w-8 items-center justify-center text-body-color duration-300 dark:text-white"
@@ -284,9 +284,9 @@ const Header = () => {
                       </g>
                     </svg>
                   </span>
-                </button>
+                </button> */}
 
-                {session?.user ? (
+                {/* {session?.user ? (
                   <>
                     <p
                       className={`loginBtn px-7 py-3 text-base font-medium ${
@@ -351,13 +351,13 @@ const Header = () => {
                       </>
                     )}
                   </>
-                )}
+                )} */}
               </div>
             </div>
           </div>
         </div>
       </header>
-    </>
+    
   );
 };
 

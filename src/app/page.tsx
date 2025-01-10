@@ -1,66 +1,41 @@
-import Image from "next/image";
+import About from "@/components/About";
+import HomeBlogSection from "@/components/Blog/HomeBlogSection";
+import CallToAction from "@/components/CallToAction";
+import Clients from "@/components/Clients";
+import ScrollUp from "@/components/Common/ScrollUp";
+import Contact from "@/components/Contact";
+import Faq from "@/components/Faq";
+import Features from "@/components/Features";
+import Hero from "@/components/Hero";
+import Pricing from "@/components/Pricing";
+import Team from "@/components/Team";
+import Testimonials from "@/components/Testimonials";
+import { getAllPosts } from "@/utils/markdown";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Play Next.js - SaaS Starter Kit and Boilerplate for Next.js",
+  description:
+    "Free Next.js SaaS Boilerplate and Starter Kit designed and built for SaaS startups. It comes with all necessary integrations, pages, and components you need to launch a feature-rich SaaS websites.",
+};
 
 export default function Home() {
+  const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <header>
-        <h1>Header Section</h1>
-      </header>
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <section className="hero">
-          <h1>Hero Section</h1>
-          <p>Welcome to our website!</p>
-        </section>
-        <h1>this is body</h1>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <p>Footer Section</p>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <main>
+      <ScrollUp />
+      <Hero />
+      <Features />
+      <About />
+      <CallToAction />
+      <Pricing />
+      <Testimonials />
+      <Faq />
+      <Team />
+      <HomeBlogSection posts={posts} />
+      <Contact />
+      <Clients />
+    </main>
   );
 }

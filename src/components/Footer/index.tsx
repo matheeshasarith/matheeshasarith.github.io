@@ -20,6 +20,12 @@ const Footer = () => {
                   className="max-w-full"
                 />
               </Link> */}
+              <a
+                href="/pricing"
+                className="inline-flex items-center justify-center rounded-md mb-6 bg-red px-7 py-3 text-center text-base font-medium text-white duration-300 hover:bg-primary/90"
+              >
+                Donate
+              </a>
               <p className="mb-8 max-w-[270px] text-base text-gray-7">
                 We create digital experiences for brands and companies by using
                 technology.

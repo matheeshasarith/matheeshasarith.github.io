@@ -63,7 +63,7 @@ const Header = () => {
               >
                 {pathUrl !== "/" ? (
                   <>
-                    <Image
+                    {/* <Image
                       src={`/images/logo/logo.svg`}
                       alt="logo"
                       width={240}
@@ -76,7 +76,7 @@ const Header = () => {
                       width={240}
                       height={30}
                       className="header-logo hidden w-full dark:block"
-                    />
+                    /> */}
                   </>
                 ) : (
                   <>

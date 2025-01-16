@@ -36,21 +36,22 @@ const PricingBox = ({ product }: { product: Price }) => {
           {product.nickname}
         </span>
         <h2 className="mb-11 text-4xl font-semibold text-dark dark:text-white xl:text-[42px] xl:leading-[1.21]">
-          <span className="text-xl font-medium">$ </span>
+          {/* <span className="text-xl font-medium">$ </span> */}
           <span className="-ml-1 -tracking-[2px]">
-            {(product.unit_amount / 100).toLocaleString("en-US", {
+            {/* {(product.unit_amount / 100).toLocaleString("en-US", {
               currency: "USD",
-            })}
+            })} */}
+            {(product.unit_amount)}
           </span>
-          <span className="text-base font-normal text-body-color dark:text-dark-6">
+          {/* <span className="text-base font-normal text-body-color dark:text-dark-6">
             {" "}
             Per Month
-          </span>
+          </span> */}
         </h2>
 
         <div className="mb-[50px]">
           <h3 className="mb-5 text-lg font-medium text-dark dark:text-white">
-            Features
+           Branch
           </h3>
           <div className="mb-10">
             {product?.offers.map((offer, i) => (
@@ -58,14 +59,14 @@ const PricingBox = ({ product }: { product: Price }) => {
             ))}
           </div>
         </div>
-        <div className="w-full">
+        {/* <div className="w-full">
           <button
             onClick={handleSubscription}
             className="inline-block rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white transition duration-300 hover:bg-primary/90"
           >
             Purchase Now
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
